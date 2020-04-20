@@ -26,7 +26,7 @@ const PORT = process.env.PORT || 5000;
 
 mongoose
   .connect(
-    `mongodb+srv://${keys.mongoUsername}:${keys.mongoPassword}@cluster0-ok5pa.mongodb.net/email-management-dev?retryWrites=true&w=majority`,
+    `mongodb+srv://${keys.mongoUsername}:${keys.mongoPassword}@cluster0-ok5pa.mongodb.net/${keys.mongoDbName}?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
