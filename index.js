@@ -24,19 +24,17 @@ require('./routes/authRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
 
-mongoose.connect(
-  `mongodb+srv://admin:Kwm74JEl2yfE8E6W@cluster0-ok5pa.mongodb.net/email-management-dev?retryWrites=true&w=majority`,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-  (error) => {
-    if (error) {
-      throw new Error('Connect MongoDB failed', error);
-    } else {
-      app.listen(PORT, () => {
-        console.log('Connect mongo DB successful');
-      });
-    }
-  },
-);
+mongoose
+  .connect(
+    `mongodb+srv://${keys.mongoUsername}:${keys.mongoPassword}@cluster0-ok5pa.mongodb.net/email-management-dev?retryWrites=true&w=majority`,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    },
+  )
+  .then(() => {
+    app.listen(process.env.PORT || 5000, () => {
+      console.log(`Server is running on Port ${PORT}`);
+    });
+  })
+  .catch((error) => console.log(error));
