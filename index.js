@@ -25,7 +25,7 @@ require('./routes/authRoutes')(app);
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(
-  keys.mongoURI,
+  `mongodb+srv://${keys.mongoUsername}:${keys.mongoPassword}@cluster0-ok5pa.mongodb.net/email-management-dev?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -34,7 +34,9 @@ mongoose.connect(
     if (error) {
       throw new Error('Connect MongoDB failed', error);
     } else {
-      app.listen(PORT);
+      app.listen(PORT, () => {
+        console.log('Connect mongo DB successful');
+      });
     }
   },
 );
