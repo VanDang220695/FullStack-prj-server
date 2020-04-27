@@ -1,14 +1,16 @@
 const mongoose = require('mongoose');
 
-const RecipientSchema = require('./Recipient');
-
 const { Schema } = mongoose;
 
 const surveySchema = new Schema({
   title: String,
   body: String,
   subject: String,
-  recipients: [RecipientSchema],
+  email: String,
+  responded: {
+    type: Boolean,
+    default: false,
+  },
   yes: {
     type: Number,
     default: 0,

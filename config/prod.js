@@ -11,4 +11,8 @@ module.exports = {
   cookieKey: process.env.COOKIE_KEY,
   stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
   stripeSecretKey: process.env.STRIPE_SECRET_KEY,
+  sendGridKey: process.env.SEND_GRID_KEY,
+  googleAccount: process.env.GOOGLE_ACCOUNT_SEND_EMAIL,
+  googlePassword: process.env.GOOGLE_PASSWORD_SEND_EMAIL,
+  redirectDomain: process.env.REDIRECT_DOMAIN,
 };
