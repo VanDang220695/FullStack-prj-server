@@ -1,6 +1,6 @@
 {
   "name": "server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "engines": {
@@ -35,5 +35,8 @@
   "devDependencies": {
     "nodemon": "^2.0.3",
     "prettier": "2.0.4"
+  },
+  "publishConfig": {
+    "VanDang220695:registry": "https://npm.pkg.github.com"
   }
 }
