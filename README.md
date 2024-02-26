@@ -1,7 +1,6 @@
 # FullStack-prj-server
-Using NodeJS, Express, google Oauth20, passport and MongoDB for learning on Udemy https://www.udemy.com/course/node-with-react-fullstack-web-development/.
-Using:
-npm install
-Demo in heroku
 
-Update readme
+# To Run this project
+1 run npm i to download all packages
+2 Go to client change file .env.development.sample to .env.development do the same with .env.production.sample and update your key
+3 run npm start 
