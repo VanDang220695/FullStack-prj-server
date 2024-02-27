@@ -1,5 +1,5 @@
 {
-  "name": "burger-project-mateor-full-stack",
+  "name": "FullStack-prj-server",
   "version": "1.0.2",
   "description": "",
   "main": "index.js",
@@ -29,6 +29,7 @@
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
     "path-parser": "^6.1.0",
+    "pratice-alg-ts": "^1.0.4",
     "sendgrid": "^5.2.3",
     "stripe": "^8.46.0"
   },
